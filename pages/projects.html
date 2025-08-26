@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malak Ahmed Saber - Data Scientist</title>
+    <link href="../assets/mainpage.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="bg-animation"></div>
+
+    <div class="container">
+
+        <!-- Projects Section -->
+        <section id="projects" class="section active">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="project-grid">
+                <div class="card">
+                    <h3>Grocery Sales Data Warehousing</h3>
+                    <div class="company">Star Schema Implementation</div>
+                    <ul>
+                        <li>Designed Data Warehouse using star schema with transactional fact tables</li>
+                        <li>Automated ETL process using SSIS with incremental loading</li>
+                        <li>Built interactive Power BI dashboard for warehouse insights</li>
+                        <li>Deployed and scheduled data workflows via SSMS</li>
+                    </ul>
+                    <div style="margin-top: 15px;">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">SSIS</span>
+                        <span class="skill-tag">Power BI</span>
+                        <span class="skill-tag">SSMS</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Egypt Tech Industry Salary Predictor</h3>
+                    <div class="company">End-to-End Data Science Project</div>
+                    <ul>
+                        <li>Extracted highly unstructured data from Google Forms</li>
+                        <li>Performed extensive data cleaning and preprocessing</li>
+                        <li>Built predictive models with interactive dashboards</li>
+                        <li>Deployed model with attractive UI using Django</li>
+                    </ul>
+                    <div style="margin-top: 15px;">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Django</span>
+                        <span class="skill-tag">Power BI</span>
+                        <span class="skill-tag">ML</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Fare Amount Prediction Models</h3>
+                    <div class="company">ML Pipeline Deployment</div>
+                    <ul>
+                        <li>Implemented machine learning pipeline using Django</li>
+                        <li>Trained and evaluated five different models</li>
+                        <li>Applied hyperparameter tuning via Grid Search and Random Search</li>
+                        <li>Used advanced preprocessing with PCA and custom transformers</li>
+                    </ul>
+                    <div style="margin-top: 15px;">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">Django</span>
+                        <span class="skill-tag">Scikit-learn</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Multi-view Shipping Analytics Dashboard</h3>
+                    <div class="company">Business Intelligence Solution</div>
+                    <ul>
+                        <li>Designed multi-page interactive Power BI dashboard</li>
+                        <li>Analyzed customer behavior and product performance</li>
+                        <li>Implemented sidebar navigation for seamless UX</li>
+                        <li>Developed key business domain KPIs with actionable insights</li>
+                    </ul>
+                    <div style="margin-top: 15px;">
+                        <span class="skill-tag">Power BI</span>
+                        <span class="skill-tag">Data Analysis</span>
+                        <span class="skill-tag">Business Intelligence</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <div class="nav-items">
+            <a href="../main.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="about.html" class="nav-item">
+                <i class="fas fa-user"></i>
+                <span>About</span>
+            </a>
+            <a href="experience.html" class="nav-item">
+                <i class="fas fa-briefcase"></i>
+                <span>Experience</span>
+            </a>
+            <a href="projects.html" class="nav-item active">
+                <i class="fas fa-code"></i>
+                <span>Projects</span>
+            </a>
+            <a href="skills.html" class="nav-item">
+                <i class="fas fa-cogs"></i>
+                <span>Skills</span>
+            </a>
+            <a href="contact.html" class="nav-item">
+                <i class="fas fa-envelope"></i>
+                <span>Contact</span>
+            </a>
+        </div>
+    </nav>
+
+
+
+
+    <script>
+        function showSection(sectionName) {
+            // Hide all sections
+            const sections = ['home', 'about', 'experience', 'projects', 'skills', 'contact'];
+            sections.forEach(section => {
+                document.getElementById(section).style.display = 'none';
+            });
+            
+            // Show selected section
+            document.getElementById(sectionName).style.display = 'block';
+            
+            // Update active nav item
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            event.target.closest('.nav-item').classList.add('active');
+        }

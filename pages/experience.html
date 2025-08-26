@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malak Ahmed Saber - Data Scientist</title>
+    <link href="../assets/mainpage.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="bg-animation"></div>
+
+    <div class="container">
+
+        <!-- Experience Section -->
+        <section id="experience" class="section active">
+            <h2 class="section-title">Experience</h2>
+            <div class="experience-grid">
+                <div class="card">
+                    <h3>Data Analytics and Visualization Intern</h3>
+                    <div class="company">Konecta – New Cairo</div>
+                    <div class="duration">Aug 2025 – Present | Hybrid</div>
+                    <ul>
+                        <li>Performed EDA using Python and collected data via web scraping</li>
+                        <li>Utilized platforms like Hugging Face for data collection</li>
+                        <li>Created visualizations using Power BI</li>
+                        <li>Completed SQL-based analysis tasks using PostgreSQL</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>Data Science Intern</h3>
+                    <div class="company">Tech Mind x Data Solutions – Nasr City</div>
+                    <div class="duration">July 2025 – Aug 2025 | Hybrid</div>
+                    <ul>
+                        <li>Created interactive dashboards in Power BI and Tableau</li>
+                        <li>Combined and transformed data from 13 supermarkets using Excel and Power Query</li>
+                        <li>Built multi-page dashboards from large datasets and OLTP systems</li>
+                        <li>Completed an end-to-end data science graduation project</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>Machine Learning Intern</h3>
+                    <div class="company">Cellula Technologies – Maadi</div>
+                    <div class="duration">July 2025 – Aug 2025 | Remote</div>
+                    <ul>
+                        <li>Developed and presented weekly ML projects</li>
+                        <li>Built end-to-end pipelines for real-world prediction tasks</li>
+                        <li>Deployed models using Django and Flask</li>
+                        <li>Performed comprehensive EDA and model building</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>BI Development Trainee</h3>
+                    <div class="company">ITI – Cairo University</div>
+                    <div class="duration">Aug 2024 – Sept 2024 | Remote</div>
+                    <ul>
+                        <li>Completed intensive training in SQL and Advanced SQL</li>
+                        <li>Learned Data Warehousing and Statistics</li>
+                        <li>Mastered SQL BI tools (SSIS, SSAS, SSRS)</li>
+                        <li>Delivered daily tasks in Excel, Power BI, and Tableau</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <div class="nav-items">
+            <a href="../main.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="about.html" class="nav-item">
+                <i class="fas fa-user"></i>
+                <span>About</span>
+            </a>
+            <a href="experience.html" class="nav-item active">
+                <i class="fas fa-briefcase"></i>
+                <span>Experience</span>
+            </a>
+            <a href="projects.html" class="nav-item">
+                <i class="fas fa-code"></i>
+                <span>Projects</span>
+            </a>
+            <a href="skills.html" class="nav-item">
+                <i class="fas fa-cogs"></i>
+                <span>Skills</span>
+            </a>
+            <a href="contact.html" class="nav-item">
+                <i class="fas fa-envelope"></i>
+                <span>Contact</span>
+            </a>
+        </div>
+    </nav>
+
+
+
+    <script>
+        function showSection(sectionName) {
+            // Hide all sections
+            const sections = ['home', 'about', 'experience', 'projects', 'skills', 'contact'];
+            sections.forEach(section => {
+                document.getElementById(section).style.display = 'none';
+            });
+            
+            // Show selected section
+            document.getElementById(sectionName).style.display = 'block';
+            
+            // Update active nav item
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            event.target.closest('.nav-item').classList.add('active');
+        }
